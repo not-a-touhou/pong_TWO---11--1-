@@ -17,7 +17,7 @@ just trust me bro.
 
 
 Pros:
-- Written in Rust with the [Notan](https://crates.io/crates/notan) game "engine", for blazing fast performance and high fidelity graphics
+- Written in Rust with the [Notan](https://www.youtube.com/watch?v=sO8gOC1cihk) game "engine", for blazing fast performance and high fidelity graphics
 - Open-source with a beautifully made and maintained codebase for ease of use and editing
 - Gripping gameplay and deep lore, able to keep you engaged for decades with minimal downsides (NOTE: for downsides, see warning.txt)
 
