@@ -1377,6 +1377,7 @@ name = "notan_pong"
 version = "0.1.0"
 dependencies = [
  "notan",
+ "notan_egui",
  "rand",
 ]
 
