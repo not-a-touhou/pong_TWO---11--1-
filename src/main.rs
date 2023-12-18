@@ -108,7 +108,7 @@ fn setup(gfx: &mut Graphics) -> Game {
         ball: Ball { 
             x_pos: (SCREEN_WIDTH / 2.0) - (BALL_SIZE / 2.0), 
             y_pos: (SCREEN_HEIGHT / 2.0) - (BALL_SIZE / 2.0), 
-            x_vel: -200.0,
+            x_vel: -400.0,
             y_vel: -1.0, 
         },
         gui: vec![
@@ -190,12 +190,12 @@ fn game_update(app: &mut App, state: &mut Game) {
     if collides_ball_paddle(&mut state.player, &mut state.ball) {
         state.ball.x_vel *= -1.0;
         let collision_dist: f32 = (state.ball.y_pos + (BALL_SIZE/2.0)) - (state.player.y_pos +(PADDLE_HEIGHT/2.0));
-        state.ball.y_vel = collision_dist * state.rng.gen::<f32>();
+        state.ball.y_vel = collision_dist * (state.rng.gen::<f32>() * 10.0);
     }
     if collides_ball_paddle(&mut state.enemy, &mut state.ball) {
         state.ball.x_vel *= -1.0;
         let collision_dist: f32 = (state.ball.y_pos + (BALL_SIZE/2.0)) - (state.enemy.y_pos +(PADDLE_HEIGHT/2.0));
-        state.ball.y_vel = collision_dist * (state.rng.gen::<f32>() * 3.0);
+        state.ball.y_vel = collision_dist * (state.rng.gen::<f32>() * 10.0);
     }
     if (state.ball.y_pos + BALL_SIZE > SCREEN_HEIGHT) || (state.ball.y_pos < 0.0) {
         state.ball.y_vel *= -1.0;
